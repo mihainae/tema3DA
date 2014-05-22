@@ -15,16 +15,19 @@ public class PaxosProposer {
     private ArrayList<ObjectOutputStream> peers;
     private ReentrantLock peersLock;
     private ReentrantLock sendLock;
-    private Hashtable<Integer, Integer> status;
+    private Hashtable<Integer, Integer> idNumbers;
+    private int id;
 
-    public PaxosProposer(int serverPort, ArrayList<Integer> peerPorts, ArrayList<Integer> acceptorPorts) throws UnknownHostException,
+    public PaxosProposer(int serverPort, ArrayList<Integer> peerPorts, ArrayList<Integer> acceptorPorts, int id) throws UnknownHostException,
             IOException {
 
+        this.id = id;
 
         peersLock = new ReentrantLock();
         new ReentrantLock();
         sendLock = new ReentrantLock();
         peers = new ArrayList<ObjectOutputStream>();
+        idNumbers = new Hashtable<Integer, Integer>();
 
         serverSocket = new ServerSocket(serverPort);
 
@@ -50,10 +53,39 @@ public class PaxosProposer {
             //new ServerThread(socket);
             ObjectOutputStream outToPeer = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream inFromPeer = new ObjectInputStream(socket.getInputStream());
-            outToPeer.writeObject("from " + serverPort);
+            ToProposer toProposer = new ToProposer(this.id, serverPort);
+            outToPeer.writeObject(toProposer);
         }
 
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+        /*
+        System.out.println("On proposer:" + serverPort);
+        for(Integer peerPort : peerPorts) {
+            System.out.println(idNumbers.get(peerPort));
+        }
+        System.out.println();
+        */
+
+        int maxId = 0;
+        for(Integer peerPort : peerPorts) {
+            if(idNumbers.get(peerPort) > maxId)
+                maxId = idNumbers.get(peerPort);
+        }
+        if(this.id > maxId) {
+            maxId = this.id;
+        }
+        System.out.println("Max ID: " + maxId);
+        if(maxId == this.id) {
+            System.out.println("On proposer:" + serverPort + " I am the distinguished proposer.");
+        }
+        else {
+            System.out.println("On proposer:" + serverPort + " I am not the distinguished proposer.");
+        }
 
     }
 
@@ -86,11 +118,11 @@ public class PaxosProposer {
 
                 while (true) {
 
-                    String message = (String) in.readObject();
+                    ToProposer message = (ToProposer) in.readObject();
                     sendLock.lock();
                     //messages.add(message);
-                    System.out.println("Received message on " + serverSocket.getLocalPort() + ": " + message);
-
+                    System.out.println("Received message on " + serverSocket.getLocalPort() + ": " + message.getId());
+                    idNumbers.put(message.getPort(), message.getId());
                     sendLock.unlock();
                 }
             } catch (java.net.SocketException t) {

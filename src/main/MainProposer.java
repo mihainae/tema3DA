@@ -28,7 +28,7 @@ public class MainProposer {
                     peerPorts.add(4040 + i);
             }
 
-            PaxosProposer paxosProposer = new PaxosProposer(serverPort, peerPorts, acceptorPorts);
+            PaxosProposer paxosProposer = new PaxosProposer(serverPort, peerPorts, acceptorPorts, serverPort);
 
         }
     }
