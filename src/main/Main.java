@@ -13,10 +13,13 @@ public class Main {
         Algorithm alg = null;
 
         if(args.length > 0) {
-
+            ports = new ArrayList<Integer>();
+            for(int i = 3; i < args.length; i++) {
+                ports.add(Integer.parseInt(args[i]));
+            }
+            //alg = new Dopt(serverPort, ports);
             System.out.println("Main: " + serverPort);
-            alg = new PaxosAcceptor(serverPort);
-
+            alg = new PaxosAcceptor(serverPort, ports);
 
             @SuppressWarnings("unused")
             UI ui = new UI(alg, generatorPort);

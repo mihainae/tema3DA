@@ -1,7 +1,6 @@
 package main;
 
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -11,28 +10,35 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class PaxosAcceptor extends Algorithm{
 
-    private Socket socket;
-    private ObjectOutputStream out;
-    private ObjectInputStream in;
-    private int myMsg;
-    private int otherMsg;
-    private ArrayList<Message> outgoing;
+    public ServerSocket serverSocket;
+    private ArrayList<ObjectOutputStream> peers;
+    private ReentrantLock peersLock;
+    private ReentrantLock sendLock;
 
-    public PaxosAcceptor (int portNumber) throws IOException {
+    public PaxosAcceptor (int serverPort, ArrayList<Integer> peerPorts) throws IOException {
 
         super();
+        serverSocket = new ServerSocket(serverPort);
 
-        socket = new Socket("localhost", portNumber);
+        peers = new ArrayList<ObjectOutputStream>();
+        peersLock = new ReentrantLock();
+        new ReentrantLock();
+        sendLock = new ReentrantLock();
 
-        out = new ObjectOutputStream(socket.getOutputStream());
-        in = new ObjectInputStream(socket.getInputStream());
+        /*
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    while(true) {
+                        new ServerThread(serverSocket.accept());
+                    }
+                } catch (IOException e) {
+                }
+            }
+        }).start();
 
-        outgoing = new ArrayList<Message>();
-
-        myMsg = 0;
-        otherMsg = 0;
-
-        /*new ReceiverThread();*/
+        new SenderThread().start();
+        */
     }
 
     @Override

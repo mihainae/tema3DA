@@ -26,7 +26,7 @@ public class Starter {
         ArrayList<ObjectInputStream> editorsIn = new ArrayList<ObjectInputStream>();
         for (Integer port : generatorPorts) {
             try {
-                System.out.println("Starter" + port);
+                System.out.println("Starter: " +port);
                 Socket socket = new Socket("localhost", port);
                 editorsOut.add(new ObjectOutputStream(socket
                         .getOutputStream()));
@@ -91,39 +91,18 @@ public class Starter {
 
     private static void startPaxos(){
 
-        int serverPortNumber = 2020;
+        int currentPort = 2020;
         int generatorPort = 3000;
+        ArrayList<String> ports = new ArrayList<String>();
+        for(int i = 0; i < numberOfEditors; i++) {
 
-        parameters.add(String.valueOf(serverPortNumber));
-
-        /*START PROPOSERS*/
-        new Thread(new Runnable() {
-            public void run() {
-
-                try {
-                    Starter.exec(ProposerServer.class);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-
-        try {
-            Thread.sleep(150);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        for (int i = 0; i < numberOfEditors; i++) {
             parameters.clear();
             parameters.add(String.valueOf(generatorPort));
-            parameters.add(String.valueOf(serverPortNumber));
+            parameters.add(String.valueOf(currentPort));
+            parameters.addAll(ports);
 
             new Thread(new Runnable() {
                 public void run() {
-
                     try {
                         Starter.exec(Main.class);
                     } catch (IOException e) {
@@ -131,17 +110,19 @@ public class Starter {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
                 }
             }).start();
 
             try {
-                Thread.sleep(150);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
+            ports.add(String.valueOf(currentPort));
             generatorPorts.add(generatorPort);
+
+            currentPort++;
             generatorPort++;
         }
     }
