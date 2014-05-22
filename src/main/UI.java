@@ -158,13 +158,13 @@ public class UI implements Observer {
 						int i = 0;
 						for (String msg : messages) {
 
-							/*if (((Dopt) algorithm).serverSocket.getLocalPort() == 2020) {
+							if (((PaxosAcceptor) algorithm).serverSocket.getLocalPort() == 2020) {
 								try {
 									Thread.sleep(10);
 								} catch (InterruptedException e) {
 									e.printStackTrace();
 								}
-							}*/
+							}
 							algorithm.processMessage(msg);
 							i++;
 						}

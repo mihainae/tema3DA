@@ -17,8 +17,7 @@ public class PaxosProposer {
     private int id;
     private ArrayList<String> commands;
 
-    public PaxosProposer(int serverPort, ArrayList<Integer> peerPorts, ArrayList<Integer> acceptorPorts, int id) throws UnknownHostException,
-            IOException {
+    public PaxosProposer(int serverPort, ArrayList<Integer> peerPorts, ArrayList<Integer> acceptorPorts, int id) throws IOException {
 
         this.id = id;
 
@@ -50,7 +49,6 @@ public class PaxosProposer {
 
         for(int i = 0; i < peerPorts.size(); i++) {
             Socket socket = new Socket("localhost", peerPorts.get(i));
-            //new ServerThread(socket);
             ObjectOutputStream outToPeer = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream inFromPeer = new ObjectInputStream(socket.getInputStream());
             ToProposer toProposer = new ToProposer(this.id, serverPort);
@@ -63,14 +61,6 @@ public class PaxosProposer {
             e.printStackTrace();
         }
 
-        /*
-        System.out.println("On proposer:" + serverPort);
-        for(Integer peerPort : peerPorts) {
-            System.out.println(idNumbers.get(peerPort));
-        }
-        System.out.println();
-        */
-
         int maxId = 0;
         for(Integer peerPort : peerPorts) {
             if(idNumbers.get(peerPort) > maxId)
@@ -81,16 +71,14 @@ public class PaxosProposer {
         }
         System.out.println("Max ID: " + maxId);
         if(maxId == this.id) {
-            System.out.println("On proposer:" + serverPort + " I am the distinguished proposer.");
+            System.out.println("On proposer: " + serverPort + " I am the distinguished proposer.");
 
             readFile();
             for(int i = 0; i < commands.size(); i++) {
-                //System.out.println(commands.get(i));
                 ToAcceptor toAcceptor = new ToAcceptor("prepare", i);
                 int prepareNumber = 0;
                 String command = null;
                 for(int j = 0; j < acceptorPorts.size(); j++) {
-                    //System.out.println(acceptorPorts.get(j));
                     Socket socket = new Socket("localhost", acceptorPorts.get(j));
                     ObjectOutputStream outToAcceptor = new ObjectOutputStream(socket.getOutputStream());
                     ObjectInputStream inFromAcceptor = new ObjectInputStream(socket.getInputStream());
@@ -99,7 +87,6 @@ public class PaxosProposer {
                     try {
                         message = (ToProposer) inFromAcceptor.readObject();
                         if(message.getType().equals("promise")) {
-                            //System.out.println("Received message: " + message.getMessage() + " " + message.getMaxRound());
                             prepareNumber++;
                             command = commands.get(i);
                         }
@@ -125,7 +112,6 @@ public class PaxosProposer {
                         try {
                             message = (ToProposer) inFromAcceptor.readObject();
                             if(message.getType().equals("accept")) {
-                                //System.out.println("Received message: " + message.getMessage() + " " + message.getMaxRound());
                                 if(message.getMaxRound() <= i){
                                     acceptedNumber++;
                                     command = commands.get(message.getMaxRound());
@@ -149,7 +135,7 @@ public class PaxosProposer {
                         outToAcceptor.writeObject(toAcceptor);
                     }
 
-                    toAcceptor = new ToAcceptor("reset", 0);
+                    toAcceptor = new ToAcceptor("reset", i);
                     for(int j = 0; j < acceptorPorts.size(); j++) {
                         Socket socket = new Socket("localhost", acceptorPorts.get(j));
                         ObjectOutputStream outToAcceptor = new ObjectOutputStream(socket.getOutputStream());
@@ -162,7 +148,7 @@ public class PaxosProposer {
             }
         }
         else {
-            System.out.println("On proposer:" + serverPort + " I am not the distinguished proposer.");
+            System.out.println("On proposer: " + serverPort + " I am not the distinguished proposer.");
         }
 
     }

@@ -49,47 +49,6 @@ public class Starter {
             e.printStackTrace();
         }
 
-        try {
-            BufferedReader input = new BufferedReader(
-                    new FileReader("commands"));
-            try {
-                String line = null;
-
-                while ((line = input.readLine()) != null) {
-
-                    String command = "";
-                    if (line.substring(0, 3).equals("del")) {
-                        command += "del:";
-                        command += line.substring(4, 5);
-                    }
-
-                    if (line.substring(0, 3).equals("ins")) {
-                        command += "ins:";
-                        command += line.substring(5, 6)
-                                + ":";
-                        command += line.substring(8, 9);
-                    }
-
-                    //System.out.println(line + " -> " + command);
-                    int clientNumber = (int) ((Math.random() * 10) % editorsOut.size());
-                    editorsOut.get(clientNumber).writeObject(command);
-
-                }
-
-                for (ObjectOutputStream editor : editorsOut) {
-                    try {
-                        editor.writeObject("execute");
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            } finally {
-                input.close();
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
     }
 
     private static void startPaxos(){
@@ -126,7 +85,6 @@ public class Starter {
             generatorPorts.add(generatorPort);
             acceptorsPorts.add(String.valueOf(currentPort));
 
-
             currentPort++;
             generatorPort++;
         }
@@ -157,7 +115,6 @@ public class Starter {
             }
 
             currentPort++;
-
         }
     }
 

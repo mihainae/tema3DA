@@ -74,17 +74,12 @@ public class PaxosAcceptor extends Algorithm{
             try {
                 out = new ObjectOutputStream(socket.getOutputStream());
 
-                //out.writeObject(String.valueOf(serverSocket.getLocalPort()));
-
                 ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
-
-                //int port = Integer.parseInt((String) in.readObject());
 
                 while (true) {
 
                     ToAcceptor message = (ToAcceptor) in.readObject();
                     sendLock.lock();
-                    //messages.add(message);
                     System.out.println("Received message on ACCEPTOR " + serverSocket.getLocalPort() + ": " + message.type + " round " + message.round);
                     if(message.type.equals("prepare")) {
 

@@ -17,8 +17,7 @@ public class Main {
             for(int i = 3; i < args.length; i++) {
                 ports.add(Integer.parseInt(args[i]));
             }
-            //alg = new Dopt(serverPort, ports);
-            System.out.println("Main: " + serverPort);
+
             alg = new PaxosAcceptor(serverPort);
 
             @SuppressWarnings("unused")
