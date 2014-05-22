@@ -7,13 +7,16 @@ import java.util.ArrayList;
 
 public class Starter {
     public static int numberOfEditors = 3;
+    public static int numberOfProposers = 3;
     public static ArrayList<String> parameters;
     private static ArrayList<Integer> generatorPorts;
+    private static ArrayList<String> acceptorsPorts;
 
     public static void main(String args[])  {
 
         parameters = new ArrayList<String>();
         generatorPorts = new ArrayList<Integer>();
+        acceptorsPorts = new ArrayList<String>();
 
         startPaxos();
 
@@ -121,9 +124,40 @@ public class Starter {
 
             ports.add(String.valueOf(currentPort));
             generatorPorts.add(generatorPort);
+            acceptorsPorts.add(String.valueOf(currentPort));
+
 
             currentPort++;
             generatorPort++;
+        }
+
+        currentPort = 4040;
+        for(int i = 0; i < numberOfProposers ; i++) {
+            parameters.clear();
+            parameters.add(String.valueOf(numberOfProposers));
+            parameters.add(String.valueOf(currentPort));
+            parameters.addAll(acceptorsPorts);
+
+            new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        Starter.exec(MainProposer.class);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            currentPort++;
+
         }
     }
 
