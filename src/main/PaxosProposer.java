@@ -90,7 +90,7 @@ public class PaxosProposer {
                 int prepareNumber = 0;
                 String command = null;
                 for(int j = 0; j < acceptorPorts.size(); j++) {
-                    System.out.println(acceptorPorts.get(j));
+                    //System.out.println(acceptorPorts.get(j));
                     Socket socket = new Socket("localhost", acceptorPorts.get(j));
                     ObjectOutputStream outToAcceptor = new ObjectOutputStream(socket.getOutputStream());
                     ObjectInputStream inFromAcceptor = new ObjectInputStream(socket.getInputStream());
@@ -99,7 +99,7 @@ public class PaxosProposer {
                     try {
                         message = (ToProposer) inFromAcceptor.readObject();
                         if(message.getType().equals("promise")) {
-                            System.out.println("Received message: " + message.getMessage() + " " + message.getMaxRound());
+                            //System.out.println("Received message: " + message.getMessage() + " " + message.getMaxRound());
                             prepareNumber++;
                             command = commands.get(i);
                         }
@@ -125,10 +125,13 @@ public class PaxosProposer {
                         try {
                             message = (ToProposer) inFromAcceptor.readObject();
                             if(message.getType().equals("accept")) {
-                                System.out.println("Received message: " + message.getMessage() + " " + message.getMaxRound());
+                                //System.out.println("Received message: " + message.getMessage() + " " + message.getMaxRound());
                                 if(message.getMaxRound() <= i){
                                     acceptedNumber++;
                                     command = commands.get(message.getMaxRound());
+                                }
+                                else {
+                                    i--;
                                 }
                             }
 
@@ -137,9 +140,25 @@ public class PaxosProposer {
                         }
                     }
                     System.out.println("AcceptedNumber: " + acceptedNumber + " for command " + command);
+
+                    toAcceptor = new ToAcceptor("commit", i, command);
+                    for(int j = 0; j < acceptorPorts.size(); j++) {
+                        Socket socket = new Socket("localhost", acceptorPorts.get(j));
+                        ObjectOutputStream outToAcceptor = new ObjectOutputStream(socket.getOutputStream());
+                        ObjectInputStream inFromAcceptor = new ObjectInputStream(socket.getInputStream());
+                        outToAcceptor.writeObject(toAcceptor);
+                    }
+
+                    toAcceptor = new ToAcceptor("reset", 0);
+                    for(int j = 0; j < acceptorPorts.size(); j++) {
+                        Socket socket = new Socket("localhost", acceptorPorts.get(j));
+                        ObjectOutputStream outToAcceptor = new ObjectOutputStream(socket.getOutputStream());
+                        ObjectInputStream inFromAcceptor = new ObjectInputStream(socket.getInputStream());
+                        outToAcceptor.writeObject(toAcceptor);
+                    }
                 }
 
-                break;
+
             }
         }
         else {

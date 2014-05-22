@@ -107,6 +107,8 @@ public class PaxosAcceptor extends Algorithm{
                             toProposer.setAcceptedProposal(acceptedProposal);
                             toProposer.setAcceptedValue(acceptedValue);
                             toProposer.setType("replace");
+
+                            out.writeObject(toProposer);
                         }
                     }
                     if(message.type.equals("accept")) {
@@ -120,6 +122,19 @@ public class PaxosAcceptor extends Algorithm{
                         toProposer.setMaxRound(maxRound);
                         toProposer.setType("accept");
                         out.writeObject(toProposer);
+                    }
+
+                    if(message.type.equals("commit")) {
+                        setChanged();
+                        notifyObservers(message.value);
+                        clearChanged();
+                    }
+
+                    if(message.type.equals("reset")) {
+                        acceptedProposal = null;
+                        acceptedValue = null;
+                        maxRound = null;
+                        minProposal = -1;
                     }
                     sendLock.unlock();
                 }

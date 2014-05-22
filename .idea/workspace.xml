@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca35cc07-2225-4de1-97a4-f95df9b9fe54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/ToAcceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/MainProposer.java" afterPath="$PROJECT_DIR$/src/main/MainProposer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/PaxosAcceptor.java" afterPath="$PROJECT_DIR$/src/main/PaxosAcceptor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/PaxosProposer.java" afterPath="$PROJECT_DIR$/src/main/PaxosProposer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Starter.java" afterPath="$PROJECT_DIR$/src/main/Starter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/ToProposer.java" afterPath="$PROJECT_DIR$/src/main/ToProposer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tema3DA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,7 +105,7 @@
       <file leaf-file-name="PaxosProposer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/PaxosProposer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="22" selection-start="5769" selection-end="5769" vertical-scroll-proportion="1.0" vertical-offset="2211" max-vertical-offset="4482">
+            <state line="159" column="0" selection-start="6912" selection-end="6912" vertical-scroll-proportion="0.8140244" vertical-offset="2559" max-vertical-offset="4824">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,7 +163,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="46" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="612">
+            <state line="21" column="46" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="612">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#741#768#1" expanded="true" />
@@ -181,7 +175,7 @@
       <file leaf-file-name="PaxosAcceptor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/PaxosAcceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="33" selection-start="4310" selection-end="4310" vertical-scroll-proportion="0.0" vertical-offset="1911" max-vertical-offset="2664">
+            <state line="129" column="39" selection-start="4600" selection-end="4600" vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="2934">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1238#1513#0" expanded="true" />
@@ -203,7 +197,7 @@
       <file leaf-file-name="UI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/UI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="37" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.0" vertical-offset="3591" max-vertical-offset="3996">
+            <state line="142" column="37" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="3996">
               <folding />
             </state>
           </provider>
@@ -611,12 +605,12 @@
       <changelist id="ca35cc07-2225-4de1-97a4-f95df9b9fe54" name="Default" comment="" />
       <created>1400751819846</created>
       <updated>1400751819846</updated>
-      <workItem from="1400751822294" duration="22392000" />
+      <workItem from="1400751822294" duration="24859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22392000" />
+    <option name="totallyTimeSpent" value="24859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
@@ -643,7 +637,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20681818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41975307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40895063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -662,7 +656,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20681818" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41975307" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40895063" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -713,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/UI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="37" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.0" vertical-offset="2043" max-vertical-offset="3996">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="11" selection-start="172" selection-end="172" vertical-scroll-proportion="0.28421053" vertical-offset="0" max-vertical-offset="666">
@@ -745,16 +732,6 @@
             <element signature="e#5589#5597#0" expanded="true" />
             <element signature="e#6232#6593#0" expanded="true" />
             <element signature="e#6582#6583#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="46" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="612">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#741#768#1" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -802,6 +779,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="46" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="612">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#741#768#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/UI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="37" selection-start="3625" selection-end="3625" vertical-scroll-proportion="0.0" vertical-offset="2043" max-vertical-offset="3996">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ToAcceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="27" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="468">
@@ -811,7 +805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/PaxosAcceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="33" selection-start="4310" selection-end="4310" vertical-scroll-proportion="0.0" vertical-offset="1911" max-vertical-offset="2664">
+        <state line="129" column="39" selection-start="4600" selection-end="4600" vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="2934">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1238#1513#0" expanded="true" />
@@ -822,7 +816,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/PaxosProposer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="22" selection-start="5769" selection-end="5769" vertical-scroll-proportion="1.0" vertical-offset="2211" max-vertical-offset="4482">
+        <state line="159" column="0" selection-start="6912" selection-end="6912" vertical-scroll-proportion="0.8140244" vertical-offset="2559" max-vertical-offset="4824">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
