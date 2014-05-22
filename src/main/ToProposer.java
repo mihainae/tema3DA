@@ -6,6 +6,15 @@ public class ToProposer implements Serializable{
 
     public int id;
     public int port;
+    public String message;
+    public String type;
+    public int maxRound;
+    public Integer acceptedProposal;
+    public String acceptedValue;
+
+    public ToProposer() {
+        ;
+    }
 
     public ToProposer(int id, int port) {
         this.id = id;
@@ -26,5 +35,45 @@ public class ToProposer implements Serializable{
 
     public int getPort() {
         return port;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setMaxRound(int maxRound) {
+        this.maxRound = maxRound;
+    }
+
+    public int getMaxRound() {
+        return maxRound;
+    }
+
+    public void setAcceptedProposal(Integer acceptedProposal) {
+        this.acceptedProposal = acceptedProposal;
+    }
+
+    public Integer getAcceptedProposal() {
+        return acceptedProposal;
+    }
+
+    public void setAcceptedValue(String acceptedValue) {
+        this.acceptedValue = acceptedValue;
+    }
+
+    public String getAcceptedValue() {
+        return acceptedValue;
     }
 }

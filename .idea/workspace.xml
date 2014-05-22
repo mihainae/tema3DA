@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca35cc07-2225-4de1-97a4-f95df9b9fe54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/ToProposer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/ToAcceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/MainProposer.java" afterPath="$PROJECT_DIR$/src/main/MainProposer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/PaxosAcceptor.java" afterPath="$PROJECT_DIR$/src/main/PaxosAcceptor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/PaxosProposer.java" afterPath="$PROJECT_DIR$/src/main/PaxosProposer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Starter.java" afterPath="$PROJECT_DIR$/src/main/Starter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/ToProposer.java" afterPath="$PROJECT_DIR$/src/main/ToProposer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tema3DA.iws" />
@@ -72,13 +76,13 @@
       <file leaf-file-name="Starter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="53" selection-start="4313" selection-end="4313" vertical-scroll-proportion="-2.8333333" vertical-offset="2291" max-vertical-offset="3780">
+            <state line="82" column="44" selection-start="2845" selection-end="2845" vertical-scroll-proportion="0.0" vertical-offset="1395" max-vertical-offset="3780">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5155#5184#1" expanded="true" />
-                <element signature="e#5587#5595#0" expanded="true" />
-                <element signature="e#6230#6591#0" expanded="true" />
-                <element signature="e#6580#6581#0" expanded="true" />
+                <element signature="e#5157#5186#1" expanded="true" />
+                <element signature="e#5589#5597#0" expanded="true" />
+                <element signature="e#6232#6593#0" expanded="true" />
+                <element signature="e#6582#6583#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,7 +91,7 @@
       <file leaf-file-name="MainProposer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/MainProposer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="108" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="720">
+            <state line="15" column="29" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -107,7 +111,7 @@
       <file leaf-file-name="PaxosProposer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/PaxosProposer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="14" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.53246754" vertical-offset="1330" max-vertical-offset="2772">
+            <state line="141" column="22" selection-start="5769" selection-end="5769" vertical-scroll-proportion="1.0" vertical-offset="2211" max-vertical-offset="4482">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,19 +119,48 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ToAcceptor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/ToAcceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="27" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="468">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ToProposer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/ToProposer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="20" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+            <state line="70" column="0" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1530">
               <folding>
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#317#318#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#655#656#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#773#774#0" expanded="true" />
+                <element signature="e#803#804#0" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#933#934#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1050#1051#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
+                <element signature="e#1202#1203#0" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
+                <element signature="e#1393#1394#0" expanded="true" />
+                <element signature="e#1433#1434#0" expanded="true" />
+                <element signature="e#1469#1470#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,10 +169,10 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="50" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="612">
+            <state line="21" column="46" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="612">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#748#775#1" expanded="true" />
+                <element signature="e#741#768#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,9 +181,11 @@
       <file leaf-file-name="PaxosAcceptor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/PaxosAcceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="10" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1062">
+            <state line="121" column="33" selection-start="4310" selection-end="4310" vertical-scroll-proportion="0.0" vertical-offset="1911" max-vertical-offset="2664">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1238#1513#0" expanded="true" />
+                <element signature="e#1502#1503#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,10 +227,11 @@
         <option value="$PROJECT_DIR$/src/main/Message.java" />
         <option value="$PROJECT_DIR$/src/main/ProposerServer.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/PaxosAcceptor.java" />
         <option value="$PROJECT_DIR$/src/main/Starter.java" />
         <option value="$PROJECT_DIR$/src/main/MainProposer.java" />
         <option value="$PROJECT_DIR$/src/main/ToProposer.java" />
+        <option value="$PROJECT_DIR$/src/main/ToAcceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/PaxosAcceptor.java" />
         <option value="$PROJECT_DIR$/src/main/PaxosProposer.java" />
       </list>
     </option>
@@ -575,12 +611,12 @@
       <changelist id="ca35cc07-2225-4de1-97a4-f95df9b9fe54" name="Default" comment="" />
       <created>1400751819846</created>
       <updated>1400751819846</updated>
-      <workItem from="1400751822294" duration="15672000" />
+      <workItem from="1400751822294" duration="22392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15672000" />
+    <option name="totallyTimeSpent" value="22392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
@@ -591,6 +627,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -605,11 +642,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20681818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20681818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41975307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
     </layout>
@@ -624,9 +660,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20681818" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20681818" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287037" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41975307" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -684,29 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="50" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="612">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#748#775#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="11" selection-start="172" selection-end="172" vertical-scroll-proportion="0.28421053" vertical-offset="0" max-vertical-offset="666">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/PaxosAcceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="10" selection-start="785" selection-end="785" vertical-scroll-proportion="0.0" vertical-offset="279" max-vertical-offset="1062">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -719,45 +736,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/MainProposer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="108" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0" vertical-offset="246" max-vertical-offset="720">
-          <folding />
+        <state line="82" column="44" selection-start="2845" selection-end="2845" vertical-scroll-proportion="0.0" vertical-offset="1395" max-vertical-offset="3780">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5157#5186#1" expanded="true" />
+            <element signature="e#5589#5597#0" expanded="true" />
+            <element signature="e#6232#6593#0" expanded="true" />
+            <element signature="e#6582#6583#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Starter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="53" selection-start="4313" selection-end="4313" vertical-scroll-proportion="-2.8333333" vertical-offset="2291" max-vertical-offset="3780">
+        <state line="21" column="46" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="612">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5155#5184#1" expanded="true" />
-            <element signature="e#5587#5595#0" expanded="true" />
-            <element signature="e#6230#6591#0" expanded="true" />
-            <element signature="e#6580#6581#0" expanded="true" />
+            <element signature="e#741#768#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ToProposer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="20" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+        <state line="70" column="0" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1530">
           <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#933#934#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1469#1470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/MainProposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ToAcceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/PaxosAcceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="33" selection-start="4310" selection-end="4310" vertical-scroll-proportion="0.0" vertical-offset="1911" max-vertical-offset="2664">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1238#1513#0" expanded="true" />
+            <element signature="e#1502#1503#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/PaxosProposer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="14" selection-start="2750" selection-end="2750" vertical-scroll-proportion="0.53246754" vertical-offset="1330" max-vertical-offset="2772">
+        <state line="141" column="22" selection-start="5769" selection-end="5769" vertical-scroll-proportion="1.0" vertical-offset="2211" max-vertical-offset="4482">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

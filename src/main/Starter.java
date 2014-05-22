@@ -70,7 +70,7 @@ public class Starter {
                         command += line.substring(8, 9);
                     }
 
-                    System.out.println(line + " -> " + command);
+                    //System.out.println(line + " -> " + command);
                     int clientNumber = (int) ((Math.random() * 10) % editorsOut.size());
                     editorsOut.get(clientNumber).writeObject(command);
 

@@ -19,7 +19,7 @@ public class Main {
             }
             //alg = new Dopt(serverPort, ports);
             System.out.println("Main: " + serverPort);
-            alg = new PaxosAcceptor(serverPort, ports);
+            alg = new PaxosAcceptor(serverPort);
 
             @SuppressWarnings("unused")
             UI ui = new UI(alg, generatorPort);

@@ -16,7 +16,7 @@ public class MainProposer {
         if(args.length > 0) {
             acceptorPorts= new ArrayList<Integer>();
             peerPorts= new ArrayList<Integer>();
-            for(int i = 2; i < args.length; i++) {
+            for(int i = 3; i < args.length; i++) {
                 acceptorPorts.add(Integer.parseInt(args[i]));
                 System.out.println("MainProposer:" + Integer.parseInt(args[i]));
             }
